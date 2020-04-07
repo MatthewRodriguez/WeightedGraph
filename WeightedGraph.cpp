@@ -41,19 +41,16 @@ void WeightedGraph::addDirectedEdge(Node *first, Node *second, int weight){
     }
 }
 
-/*
+
 void WeightedGraph::removeDirectedEdge(Node *first, Node *second){
     if (first->list.empty())
         return;
     unordered_map<Node*, int>::iterator it;
-    int count = 0;
-    for (it = first->list.begin(); it != first->list.end(); it++){
+    for (it = first->list.begin(); it != first->list.end(); it++)
         if (it->first->info == second->info)
-            it->first->list.erase(it->first->list.begin()+count);
-    }
-  
+            it->first->list.erase(second);
 }
-*/
+
 void WeightedGraph::printNodes(){
     cout << " { ";
     for (int i = 0; i < nodes.size(); i++)
